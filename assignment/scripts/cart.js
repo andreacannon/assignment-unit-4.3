@@ -1,7 +1,7 @@
 console.log('***** Cart Functions *****');
 
-let basket = [];
-console.log("Basket contents: ", basket); //global variable basket, an empty array. 
+let basket = []; //global variable, an empty array. 
+console.log("Basket contents: ", basket); 
 
 function addItem (item) {
     basket.push(item);
@@ -9,18 +9,24 @@ function addItem (item) {
 }
 addItem('almonds');
 addItem('cashews');
-console.log("Basket contents: ", basket); //function to add items. 
+console.log("Basket contents: ", basket); 
+//function to add items. 
 
 function listItems() {
     for (let i = 0; i < basket.length; i++) {
         console.log(basket[i]);
     }
 }
-listItems()
+listItems() //looping over items listed in basket. 
 console.log("Basket contents: ",basket);
 
-
-
+function empty() {
+    while (basket.length > 0) {
+        basket.pop();
+    }
+}
+empty() //emptied basket. 
+console.log("Basket contents: ",basket); 
 
 
 
