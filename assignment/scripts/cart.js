@@ -1,9 +1,23 @@
 console.log('***** Cart Functions *****');
-// Make sure to test all functions here in the JS file!
-// We want to see how you are testing your code!!!
 
+let basket = [];
+console.log("Basket contents: ", basket); //global variable basket, an empty array. 
 
+function addItem (item) {
+    basket.push(item);
+    return true;
+}
+addItem('almonds');
+addItem('cashews');
+console.log("Basket contents: ", basket); //function to add items. 
 
+function listItems() {
+    for (let i = 0; i < basket.length; i++) {
+        console.log(basket[i]);
+    }
+}
+listItems()
+console.log("Basket contents: ",basket);
 
 
 
